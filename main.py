@@ -44,13 +44,13 @@ def root():
     return {}
 
 
-@app.get('/dog/')
+@app.get('/dog')
 def dogs(kind: str = None):
     
     dog_kinds = { 'terrier', 'bulldog', 'dalmatian' }
     
     if kind is None or kind in dog_kinds:
-        return [dogs_db[key] for key in dogs_db if key is None or dogs_db[key].kind == kind]
+        return [dogs_db[key] for key in dogs_db if kind is None or dogs_db[key].kind == kind]
     raise HTTPException(status_code=404)
 
 @app.get('/dog/{id}')

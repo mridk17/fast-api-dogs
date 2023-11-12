@@ -1,2 +1,3 @@
 # fast-api-dogs
-  ДЗ  FastAPI
+  ДЗ  FastAPI -  Реализовать сервис API для работы с собачками
+  
